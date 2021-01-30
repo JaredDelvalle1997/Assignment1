@@ -1,0 +1,18 @@
+# depslib dependency file v1.0
+1611806162 source:c:\users\jared\documents\computer science 1 - cop3502c\assignment 1\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<math.h>
+	<time.h>
+	"leak_detector_c.h"
+	"sp21_cop3502_as1.h"
+
+1611713758 c:\users\jared\documents\computer science 1 - cop3502c\assignment 1\leak_detector_c.h
+
+1611714270 c:\users\jared\documents\computer science 1 - cop3502c\assignment 1\sp21_cop3502_as1.h
+
+1611713758 source:c:\users\jared\documents\computer science 1 - cop3502c\assignment 1\leak_detector_c.h
+
+1611714270 source:c:\users\jared\documents\computer science 1 - cop3502c\assignment 1\sp21_cop3502_as1.h
+
