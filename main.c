@@ -97,35 +97,69 @@ void remove_crlf(char *s)
     }
 }
 
-/* Double pointer - utilitzed to allocate memory for multiple monsters in the size of "n" */
+
+
+
+
+/* This function is meant to read the input file into the monster structure */
+void read_monsters_into_struct(FILE *ipf, monster *m, char *buf)
+{
+    int id;
+    char namebuf[256];
+    char elementbuf[256];
+    int population;
+
+    sscanf("%s %s %d",namebuf, elementbuf, &population);
+
+}
+
+void sort_into_all_structs(FILE *ifp, monster *m, region *r, itinerary *i, trainer *t)
+{
+    char buf[256];
+
+    char categories[] = {"monsters", "regions", "Trainers"};
+
+    while(get_next_nonblank_line(ifp, buf, 255))
+    {
+        // Put Reading Formulas here
+    }
+
+
+}
+
+
+
+
+
+/* Double pointer - utilitzed to allocate memory for dparray */
 monster **new_monster_dparray(int n)
 {
     return calloc(n, sizeof(monster *));
 
 }
 
-/* Constructor for new monster to go into 2-D Array for monsters
+/* Constructor for new monster to go into 2-D Array for monsters */
 monster *new_monster(int id, char *name, char *element, int population)
 {
 
 
 }
-*/
-/* A void function with the purpose of freeing memory from an array where memory was previous allocated
+
+/* A void function with the purpose of freeing memory from an array where memory was previous allocated */
 void dispose_dparray(monster **array)
 {
     free(array);
 }
-*/
+
 int main()
 {
     // atexit(report_mem_leak);
 
     FILE *opf;
     FILE *ipf;
-    monster **monsters;
+    monster *monsters;
 
-    char buf[1000];
+    char buf[256];
 
 
     /* Open up the input and output files */
@@ -135,7 +169,7 @@ int main()
     /* Clean input data for any non-blank spaces */
     while(get_next_nonblank_line(ipf, buf, 255))
     {
-        //fprintf(opf,"%s\n",buf);
+       // fprintf(opf,"%s\n",buf); // This Works
         printf("%s\n", buf);
 
     }
